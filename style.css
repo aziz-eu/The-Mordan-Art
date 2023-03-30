@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&family=Lato&family=Mulish&family=Pacifico&family=Roboto:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+img{
+   max-width: 80vw;
+}
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #222;
+    color: #333;
+    font-family: 'Lato',sans-serif;
+    
+}
+.container{
+    background-color: #fafafa;
+    padding: 50px;
+}
+
+.circle-container{
+   position: fixed;
+    top: -100px;
+    left: -100px;
+ 
+}
+.circle{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: fixed;
+    background-color : #ff7979;
+}
+
+.circle button {
+    position: absolute;
+    left: 50%;
+    top : 50%;
+    height: 50px ;
+    background-color: transparent;
+    border: none;
+    font-size: 26px;
+    color: #fff;
+}
+
+.circle #open{
+    left: 60%;
+}
+
+.circle #close{
+    top: 60%;
+    transform: rotate(90deg);
+    transform-origin: top left;
+}
+
+.logo{
+    text-align: end;
+    margin-right: 5%;
+    font-family: 'Fasthand', cursive;;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 2;
+}
+
+
+/* Banner  */
+
+main{
+    margin: 3rem;
+}
+
+
+
+
+
+.banner{
+    background-image: url('images/gabriela-gomez-3NXyodgX254-unsplash.jpg');
+    height: 400px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;    
+    padding: .5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    
+}
+.banner-title h1{
+   
+font-size: 2.5rem;
+margin-bottom: 0.5rem;
+    
+}
+
+
+
+
+@media screen and (max-width: 480px) {
+    
+    .container{
+        padding: 0;
+        margin: 0;
+    }
+}
