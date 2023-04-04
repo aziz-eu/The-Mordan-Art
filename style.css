@@ -143,6 +143,9 @@ margin-bottom: 0.5rem;
     
 }
 
+
+
+
 .feature-title{
     color: #222;
     letter-spacing: .2rem;
@@ -318,5 +321,26 @@ nav ul li a i {
 .container.show-nav  + nav li{
     transform: translateX(0);
     transition: transform .8s linear;
+
+}
+
+@media screen and (max-width: 800px) {
+    
+    .feature-images{
+        justify-content: center;
+    }
+    .feature-image{
+        width: 33vw;
+        margin: 1rem 0.2rem ;
+    }
+
+    .panel:nth-child(4),
+    .panel:nth-child(5){
+        display:none;
+    }
+
+    .show-nav{
+        transform: rotate(-12deg);
+}
 
 }
