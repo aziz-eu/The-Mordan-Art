@@ -180,13 +180,7 @@ margin-bottom: 0.5rem;
 
 
 
-@media screen and (max-width: 480px) {
-    
-    .container{
-        padding: 0;
-        margin: 0;
-    }
-}
+
 
 
 /* art-gallery */
@@ -330,7 +324,7 @@ nav ul li a i {
         justify-content: center;
     }
     .feature-image{
-        width: 33vw;
+        width: 30vw;
         margin: 1rem 0.2rem ;
     }
 
@@ -343,4 +337,20 @@ nav ul li a i {
         transform: rotate(-12deg);
 }
 
+}
+
+@media screen and (max-width: 521px) {
+    
+
+    .container{
+        padding: 0;
+        margin: 0;
+    }
+    .feature-images{
+        justify-content: center;
+    }
+    .feature-image{
+        width: 50vw;
+        margin: 1rem 0.2rem ;
+    }
 }
