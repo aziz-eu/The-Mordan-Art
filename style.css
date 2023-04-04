@@ -4,10 +4,12 @@
     box-sizing: border-box;
 }
 
-img{
-   max-width: 80vw;
+li{
+    list-style: none;
 }
-
+a{
+    text-decoration: none;
+}
 body{
     margin: 0;
     overflow-x: hidden;
@@ -19,7 +21,20 @@ body{
 .container{
     background-color: #fafafa;
     padding: 50px;
+    transform-origin: top left;
+    transition: transform .8s linear;
+    padding-top: 20px;
+
 }
+
+.show-nav{
+    transform: rotate(-20deg);
+    transform-origin: top left;
+    position: relative;
+    
+}
+
+
 
 .circle-container{
    position: fixed;
@@ -33,6 +48,12 @@ body{
     border-radius: 50%;
     position: fixed;
     background-color : #ff7979;
+    transition: transform 0.8s linear;
+}
+
+.container.show-nav .circle{
+    transform: rotate(-70deg);
+    
 }
 
 .circle button {
@@ -44,10 +65,13 @@ body{
     border: none;
     font-size: 26px;
     color: #fff;
+    cursor: pointer;
 }
 
 .circle #open{
     left: 60%;
+    top:60%
+    
 }
 
 .circle #close{
@@ -58,12 +82,15 @@ body{
 
 .logo{
     text-align: end;
-    margin-right: 5%;
+    margin-right: 3rem;
     font-family: 'Fasthand', cursive;;
     font-size: 26px;
     font-weight: bold;
     letter-spacing: 2;
+    
+    
 }
+
 
 
 /* Banner  */
@@ -112,6 +139,7 @@ margin-bottom: 0.5rem;
     justify-content: space-between ;
     align-items:normal;
     flex-wrap: wrap;
+    cursor: pointer;
     
 }
 
@@ -155,4 +183,140 @@ margin-bottom: 0.5rem;
         padding: 0;
         margin: 0;
     }
+}
+
+
+/* art-gallery */
+
+.art-gallery{
+    text-align: center;
+}
+
+
+
+.art-gallery-title{
+    font-size: 2rem;
+    margin-bottom: .3rem;
+}
+
+.gallery-images{
+    display: flex;
+    height: 90vh;
+    justify-content: space-between;
+   
+   
+    
+}
+
+
+.panel{
+    display: flex;
+    flex: 0.5;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 10px;
+    border-radius: 20px;
+    height: 80vh;
+    position: relative;
+    transition: .7s ease-in;
+    cursor: pointer;
+}
+.panel:first-child{
+    margin-left: 0;
+}
+
+.panel:last-child{
+    margin-right: 0;
+}
+.panel.active{
+    flex: 5;
+    cursor: auto;
+}
+
+.panel h3{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    opacity: 0;
+    color: #fff;
+   
+}
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 1s ease-in;
+}
+.panel1{
+background-image: url('images/fuu-j-Lo7venJ_ywM-unsplash.jpg');
+}
+.panel2{
+background-image: url("images/yannis-papanastasopoulos-kKzbyDeb62M-unsplash.jpg");
+}
+
+.panel3{
+background-image: url("images/fuu-j-Lo7venJ_ywM-unsplash.jpg");
+}
+
+.panel4{
+background-image: url("images/jon-tyson-QL0FAxaq2z0-unsplash.jpg");
+}
+
+.panel5{
+
+    background-image: url("images/dan-farrell-fT49QnFucQ8-unsplash.jpg");
+}
+
+/* footer */
+.copyright{
+
+  
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-style: italic
+}
+
+
+nav{
+margin-left: 0;
+position: fixed;
+bottom: 20px;
+left: -15px;
+}
+
+nav ul li a{
+    color: #fff;
+    
+}
+nav ul li {
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+    transform: translateX(-100%);
+}
+
+nav ul li + li {
+    margin-left:15px ;
+    transform: translateX(-200%);
+
+}
+
+nav ul li + li +li {
+    margin-left: 30px;
+    transform: translateX(-200%);
+} 
+
+nav ul li a i {
+   margin-right: 20px;
+   font-size: 26px;
+}
+
+
+
+
+
+.container.show-nav  + nav li{
+    transform: translateX(0);
+    transition: transform .8s linear;
+
 }
